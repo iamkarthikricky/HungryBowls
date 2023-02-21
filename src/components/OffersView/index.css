@@ -1,0 +1,34 @@
+.header-ul-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.offers-container {
+  height: 50px;
+}
+
+.offer-image {
+  height: 120px;
+  width: 100%;
+}
+.slider {
+  height: 90px;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .offers-container {
+    height: 180px;
+    margin-top: 10px;
+  }
+  .offer-image {
+    height: 180px;
+  }
+  .slider {
+    height: 150px;
+  }
+}
