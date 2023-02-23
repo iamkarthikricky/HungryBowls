@@ -44,7 +44,7 @@ const RestaurantCard = props => {
     <li testid="restaurant-item" className="restaurant-list-item ">
       <img src={imageUrl} alt="restaurant" className="restaurant-image" />
       <div className="restaurant-content-container">
-        <p className="restaurant-name">{name}</p>
+        <h1 className="restaurant-name">{name}</h1>
         <p className="restaurant-cuisine">{cuisine}</p>
         <div className="restaurant-rating-container">
           <AiFillStar color="#FFCC00" size="12px" />
