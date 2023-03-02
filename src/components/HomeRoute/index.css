@@ -1,9 +1,15 @@
 .home-container {
   background-color: #ffffff;
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .home-container {
+    width: 80%;
+  }
 }
 .restaurant-container {
   margin: 10px;
@@ -39,7 +45,11 @@
   background-color: none;
   outline: none;
 }
-
+.sort-option {
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin-left: 5px;
+}
 @media screen and (min-width: 1024px) {
   .restaurant-name-container {
     flex-direction: row;
@@ -68,7 +78,7 @@
   margin-top: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .restaurant-ul-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -145,4 +155,6 @@
   background-color: transparent;
   border: 2px solid #e5e5e5;
   color: #334155;
+  cursor: pointer;
+  outline: none;
 }

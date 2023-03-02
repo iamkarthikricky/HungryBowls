@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/button-has-type */
 import {Component} from 'react'
-import {Redirect} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import Loader from 'react-loader-spinner'
@@ -24,6 +24,7 @@ const apiStatusConstants = {
   success: 'SUCCESS',
   failure: 'FAILURE',
 }
+
 const sortByOptions = [
   {
     id: 0,
@@ -36,23 +37,30 @@ const sortByOptions = [
     value: 'Lowest',
   },
 ]
+
 const RestaurantCard = props => {
   const {restaurantDetail} = props
-  const {imageUrl, name, cuisine, userRating} = restaurantDetail
+  const {id, imageUrl, name, cuisine, userRating} = restaurantDetail
   const {rating, totalReviews} = userRating
   return (
-    <li testid="restaurant-item" className="restaurant-list-item ">
-      <img src={imageUrl} alt="restaurant" className="restaurant-image" />
-      <div className="restaurant-content-container">
-        <h1 className="restaurant-name">{name}</h1>
-        <p className="restaurant-cuisine">{cuisine}</p>
-        <div className="restaurant-rating-container">
-          <AiFillStar color="#FFCC00" size="12px" />
-          <p className="restaurant-rating">{rating}</p>
-          <p className="restaurant-reviews">({totalReviews} ratings)</p>
+    <Link
+      to={`/restaurant/${id}`}
+      className="nav-link"
+      testid="restaurant-item"
+    >
+      <li className="restaurant-list-item ">
+        <img src={imageUrl} alt="restaurant" className="restaurant-image" />
+        <div className="restaurant-content-container">
+          <h1 className="restaurant-name">{name}</h1>
+          <p className="restaurant-cuisine">{cuisine}</p>
+          <div className="restaurant-rating-container">
+            <AiFillStar color="#FFCC00" size="12px" />
+            <p className="restaurant-rating">{rating}</p>
+            <p className="restaurant-reviews">({totalReviews} ratings)</p>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </Link>
   )
 }
 
@@ -71,11 +79,9 @@ class Home extends Component {
 
   onLeftBtnClick = () => {
     const {activePage} = this.state
-    if (activePage <= 1) {
-      this.setState(preValue => ({activePage: preValue.activePage}))
-    } else {
+    if (activePage > 1) {
       this.setState(
-        preValue => ({activePage: preValue.activePage - 1}),
+        preState => ({activePage: preState.activePage - 1}),
         this.getRestaurantsList,
       )
     }
@@ -83,11 +89,9 @@ class Home extends Component {
 
   onRightBtnClick = () => {
     const {activePage, totalPages} = this.state
-    if (activePage === totalPages) {
-      this.setState(preValue => ({activePage: preValue.activePage}))
-    } else {
+    if (activePage < totalPages) {
       this.setState(
-        preValue => ({activePage: preValue.activePage + 1}),
+        preState => ({activePage: preState.activePage + 1}),
         this.getRestaurantsList,
       )
     }
@@ -150,9 +154,10 @@ class Home extends Component {
             </div>
 
             <div className="sort-dropdown-container">
-              <label htmlFor="sort-option">
+              <div className="sort-dropdown-container">
                 <MdOutlineSort size="24" />
-              </label>
+                <p className="sort-option">Sort by</p>
+              </div>
               <select
                 id="sort-option"
                 className="sort-dropdown"
@@ -161,7 +166,7 @@ class Home extends Component {
               >
                 {sortByOptions.map(eachItem => (
                   <option key={eachItem.id} value={eachItem.value}>
-                    Sort by {eachItem.displayText}
+                    {eachItem.displayText}
                   </option>
                 ))}
               </select>
@@ -174,15 +179,18 @@ class Home extends Component {
           </ul>
           <div className="pagination-btn-container">
             <button
+              type="button"
               testid="pagination-left-button"
               className="pagination-btn"
               onClick={this.onLeftBtnClick}
             >
               <MdKeyboardArrowLeft />
             </button>
-            <span testid="active-page-number" className="page-number">
-              {activePage} of {totalPages}
-            </span>
+            <p testid="active-page-number" className="page-number">
+              {activePage}
+            </p>
+            <span className="page-number">of</span>
+            <p className="page-number">{totalPages}</p>
             <button
               testid="pagination-right-button"
               className="pagination-btn"

@@ -4,15 +4,15 @@
   padding: 0;
 }
 .offers-container {
-  height: 50px;
+  height: 100px;
 }
 
 .offer-image {
-  height: 120px;
+  height: 100px;
   width: 100%;
 }
 .slider {
-  height: 90px;
+  height: 80px;
 }
 .loader-container {
   display: flex;
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .offers-container {
     height: 180px;
     margin-top: 10px;

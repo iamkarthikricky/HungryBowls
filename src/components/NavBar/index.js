@@ -41,7 +41,9 @@ class NavBar extends Component {
                 <GiHamburgerMenu size="26" />
               </button>
             </div>
-            {displayHamburger ? (
+          </nav>
+          {displayHamburger ? (
+            <div className="hamburger-container">
               <ul className="hamburger-ul-list">
                 <Link to="/" className="nav-link">
                   <li className="list-name">Home</li>
@@ -52,14 +54,14 @@ class NavBar extends Component {
                 <button className="logout-btn" onClick={this.onLogout}>
                   Logout
                 </button>
-                <button className="hamburger-btn" onClick={this.onHamburger}>
-                  <AiFillCloseCircle size="26" />
-                </button>
               </ul>
-            ) : (
-              ''
-            )}
-          </nav>
+              <button className="hamburger-btn" onClick={this.onHamburger}>
+                <AiFillCloseCircle size="26" />
+              </button>
+            </div>
+          ) : (
+            ''
+          )}
         </div>
         <div className="nav-bar-large-view">
           <nav className="nav-bar">
