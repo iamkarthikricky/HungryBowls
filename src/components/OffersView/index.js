@@ -78,7 +78,7 @@ class OffersView extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="restaurants-offers-loader">
       <Loader type="ThreeDots" color="#010101" height="100" width="25" />
     </div>
   )
@@ -96,11 +96,7 @@ class OffersView extends Component {
   }
 
   render() {
-    return (
-      <div className="offers-container" testid="restaurants-offers-loader">
-        {this.renderOfferView()}
-      </div>
-    )
+    return <div className="offers-container">{this.renderOfferView()}</div>
   }
 }
 

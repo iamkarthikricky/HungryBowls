@@ -5,8 +5,9 @@ import Cookies from 'js-cookie'
 
 import {BsStarFill} from 'react-icons/bs'
 import {BiRupee} from 'react-icons/bi'
-import {AiFillStar} from 'react-icons/ai'
 import NavBar from '../NavBar'
+import MenuItem from '../MenuItem'
+import Footer from '../Footer'
 
 import './index.css'
 
@@ -17,27 +18,6 @@ const apiStatusConstants = {
   failure: 'FAILURE',
 }
 
-const FoodItemView = props => {
-  const {foodItem} = props
-  const {cost, imageUrl, name, rating} = foodItem
-  return (
-    <li className="food-details-main-container" testid="foodItem">
-      <img src={imageUrl} alt="food-item" className="food-item-image" />
-      <div className="food-item-details-container ">
-        <h1 className="food-item-name">{name}</h1>
-        <div className="rating-container">
-          <BiRupee size="16" />
-          <p className="food-item-cost">{cost}</p>
-          <span className="food-item-cost">.00</span>
-        </div>
-        <div className="rating-container">
-          <AiFillStar size="16" />
-          <p className="food-rating">{rating}</p>
-        </div>
-      </div>
-    </li>
-  )
-}
 class Restaurant extends Component {
   state = {
     restaurantDetailsApiStatus: apiStatusConstants.initial,
@@ -141,16 +121,17 @@ class Restaurant extends Component {
         <div className="restaurant-items-container">
           <ul className="restaurant-items-list">
             {foodItemsList.map(eachFoodItem => (
-              <FoodItemView key={eachFoodItem.id} foodItem={eachFoodItem} />
+              <MenuItem key={eachFoodItem.id} foodItem={eachFoodItem} />
             ))}
           </ul>
         </div>
+        <Footer />
       </>
     )
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="restaurants-details-loader">
+    <div className="loader-container" testid="restaurant-details-loader">
       <Loader type="ThreeDots" color="#010101" height="100" width="25" />
     </div>
   )
@@ -168,8 +149,6 @@ class Restaurant extends Component {
   }
 
   render() {
-    const {foodItemsList} = this.state
-    console.log(foodItemsList)
     return <>{this.renderRestaurant()}</>
   }
 }

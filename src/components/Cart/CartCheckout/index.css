@@ -1,0 +1,25 @@
+.cart-main-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.cart-ul-list {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1024px) {
+  .cart-main-container {
+    background-color: #f9fbfe;
+    border: 1px solid rgba(11, 105, 255, 0.1);
+  }
+}

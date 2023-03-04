@@ -1,4 +1,37 @@
 .cart-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cooking-image {
+  width: 150px;
+}
+.empty-cart-heading {
+  font-family: 'DM Sans';
+  font-size: 20px;
+}
+.empty-cart-para {
+  font-family: 'DM Sans';
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .cooking-image {
+    width: 300px;
+  }
+  .empty-cart-heading {
+    font-size: 32px;
+    line-height: 0;
+    padding-top: 15px;
+  }
+  .empty-cart-para {
+    font-size: 16px;
+    padding-top: 15px;
+  }
 }
