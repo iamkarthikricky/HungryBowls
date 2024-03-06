@@ -1,4 +1,4 @@
-In this project let's build a **Tasty Kitchens App** by applying the concepts we have learned till now. This project allows you to practice the concepts and techniques learned till React Course and apply them in a concrete project.
+In this project let's build a **Hungry Bowls App** by applying the concepts we have learned till now. This project allows you to practice the concepts and techniques learned till React Course and apply them in a concrete project.
 
 You will demonstrate your skills by creating an app that will fetch data from an internal server using a class component, displaying that data, using **component lifecycle** methods, **routing** concepts, **authentication**, and **authorization**, and adding responsiveness to the website.
 
@@ -55,7 +55,7 @@ The app must have the following functionalities
 - Users should be able to view the website responsively in mobile view, tablet view as well.
 - Home Route
   - Navbar should contain the application title with logo, Home, Cart, and Logout button.
-  - Users should be able to navigate to Home route when clicking on **TASTY KITCHENS** logo.
+  - Users should be able to navigate to Home route when clicking on **HUNGRY BOWLS** logo.
   - Users should be able to see carousel images with its offer details.
   - Users should be able to see Popular Restaurants.
   - Users should be able to see the sort by icon as shown in the Figma.
@@ -114,12 +114,12 @@ Below Instructions are needed to pass the test cases.
     - **Note:** use the particular restaurant id in place of id.
   - The Cart Route should contain the pathname as `/cart`.
 - Login Component:
-  - The Tasty Kitchen image should consist of alt text as `website logo`.
+  - The Hungry Bowls image should consist of alt text as `website logo`.
   - The Landing image should consist of alt text as `website login`.
   - The Cookies should be set by using the key name `jwt_token`.
 - Home:
 
-  - The Tasty Kitchen image in Navbar should consist of alt text as `website logo`.
+  - The Hungry Bowls image in Navbar should consist of alt text as `website logo`.
   - The Restaurants offer Loader component should contain the test id with value as `restaurants-offers-loader`.
   - The Restaurants list Loader component should contain the test id with value as `restaurants-list-loader`.
   - The Restaurants Offer images should contain alt text as `offer`.

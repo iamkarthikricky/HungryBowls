@@ -14,10 +14,11 @@ class Footer extends Component {
       <div className="footer-container">
         <div className="footer-logo-container">
           <img
-            src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1667901701/Tasty-Kitchens/logo_footer_krnami.png"
+            src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1680612207/HungryBowls/Screenshot_2023-04-04_181211-removebg-preview_pvgb2v.png"
             alt="website-footer-logo"
+            className="website-logo"
           />
-          <h1 className="footer-heading">Tasty Kitchens</h1>
+          <h1 className="footer-heading">Hungry Bowls</h1>
         </div>
         <p className="footer-description">
           The only thing we are serious about is food. Contact us on

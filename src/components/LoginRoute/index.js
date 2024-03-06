@@ -65,10 +65,11 @@ class Login extends Component {
         <form className="form-container" onSubmit={this.onFormSubmit}>
           <div className="login-large-view">
             <img
-              src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1667564911/Tasty-Kitchens/VectorlandingImage_jjynow.png"
+              src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1680589851/HungryBowls/hungry_bowls-removebg-preview_cfhpo4.png"
               alt="website logo"
+              className="website-logo"
             />
-            <h1 className="app-name">Tasty Kitchens</h1>
+            <h1 className="app-name">Hungry Bowls</h1>
           </div>
           <h1 className="login-main-heading">Login</h1>
           <label htmlFor="usernameMobile" className="label-text">

@@ -17,11 +17,21 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .website-logo {
   width: 30px;
-  height: 30px;
+  height: 40px;
   margin-right: 10px;
 }
+
+@media screen and (min-width: 1024px) {
+  .website-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+}
+
 .nav-link {
   text-decoration: none;
   color: black;

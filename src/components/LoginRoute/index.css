@@ -30,6 +30,11 @@
   }
 }
 
+.website-logo {
+  width: 200px;
+  height: 200px;
+}
+
 .form-container {
   margin: 10px;
   padding: 10px;
@@ -67,7 +72,7 @@
 .app-name {
   font-family: 'DM Sans';
   font-size: 26px;
-  color: #f7931e;
+  color: red;
 }
 
 .label-text {

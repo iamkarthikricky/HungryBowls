@@ -31,11 +31,11 @@ class NavBar extends Component {
             <div className="header-container">
               <Link to="/" className="nav-link">
                 <img
-                  src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1667564911/Tasty-Kitchens/VectorlandingImage_jjynow.png"
+                  src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1680612207/HungryBowls/Screenshot_2023-04-04_181211-removebg-preview_pvgb2v.png"
                   alt="website logo"
                   className="website-logo"
                 />
-                <h1 className="app-name">Tasty Kitches</h1>
+                <h1 className="app-name">Hungry Bowls</h1>
               </Link>
               <button className="hamburger-btn" onClick={this.onHamburger}>
                 <GiHamburgerMenu size="26" />
@@ -68,11 +68,11 @@ class NavBar extends Component {
             <div className="header-container">
               <Link to="/" className="nav-link">
                 <img
-                  src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1667564911/Tasty-Kitchens/VectorlandingImage_jjynow.png"
+                  src="https://res.cloudinary.com/dlwydxzdi/image/upload/v1680612207/HungryBowls/Screenshot_2023-04-04_181211-removebg-preview_pvgb2v.png"
                   alt="website logo"
                   className="website-logo"
                 />
-                <h1 className="app-name">Tasty Kitches</h1>
+                <h1 className="app-name">Hungry Bowls</h1>
               </Link>
               <ul className="ul-list">
                 <Link to="/" className="nav-link">
